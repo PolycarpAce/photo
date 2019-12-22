@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './Images.css';
-import "~slick-carousel/slick/slick.css";
-import "~slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
 
 const photos = [
@@ -29,7 +29,7 @@ const photos = [
         name: 'photo 5',
         url: "https://images.unsplash.com/photo-1490136014051-32940d55a28d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
     }
-]
+];
 
 class Images extends Component{
     render() {
@@ -42,21 +42,21 @@ class Images extends Component{
             arrows:true,
             slidesToScroll:1,
             className: "slides"
-        }
+        };
         return (
             <div className="Images">
                 <h3>Scroll</h3>
-                <slider {...settings}>
+                <Slider {...settings}>
                     {photos.map((photo) =>{
                         return(
                             <div>
-                                <img width="100%" src={photo.url}/>
+                                <img width="100%" src={photo.url} alt='img'/>
                             </div>
                         )
 
                     })}
 
-                </slider>
+                </Slider>
             </div>
 
         );
