@@ -6,7 +6,7 @@ import Images from "./Images";
 import * as serviceWorker from './serviceWorker';
 import { Router, Route, Switch} from 'react-router-dom';
 import { createBrowserHistory } from "history";
-const hist =createBrowserHistory()
+const hist =createBrowserHistory();
 ReactDOM.render(
     <Router history={hist}>
         <Switch>
